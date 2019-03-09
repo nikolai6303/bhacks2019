@@ -1,0 +1,34 @@
+{% extends 'social/base.html' %}
+{% block body %}
+<br>
+<br>
+<br>
+{% load static %}
+<style>
+.heading{
+	background:green;
+}
+</style>
+<div class="container">
+
+<h1 class="heading">Chat Room</h1>
+{% for pro in pink %}
+<h1>{{pro.problems}}</h1>
+	{% for some in pro.answers %}
+	<div class="col-lg-4">
+		<h3>{{some.reply}}</h3>
+	</div>
+	{% endfor %}
+<form method="post" action="{% url 'reply' pro.pro.id %}">
+	{% csrf_token %}
+	{{pro.reply}}
+	<input type="submit" value="submit">
+</form>
+{% endfor %}
+<form action="{% url 'chat' %}" method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	{{form}}
+<input type="submit" value="submit">
+</form>
+</div>
+{% endblock %}

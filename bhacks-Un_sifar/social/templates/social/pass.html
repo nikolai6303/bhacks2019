@@ -1,0 +1,30 @@
+{% extends 'social/base.html' %}
+{% block body %}
+<br>
+<br>
+<br>
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'registration/one_st.css' %}" type="text/css">
+    <section class="container-fluid bg">
+      <section class="row justify-content-center">
+        <section class="col-12 col-sm-6 col-md-3">
+          <form class="form-container" method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="form-group">
+              <label for="exampleInputEmail1">{{field.label_tag}}</label>
+              {{field}}
+              <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+            </div>
+            {% endfor %}
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Submit</button>
+          </form>
+        </section>
+      </section>
+    </section>
+{% endblock %}

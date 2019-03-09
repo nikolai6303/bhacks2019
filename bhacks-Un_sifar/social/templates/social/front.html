@@ -1,0 +1,70 @@
+{% extends 'social/base.html' %}
+{% block body %}
+
+<!-- Header -->
+<header class="w3-container w3-green w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">Un_sifar</h1>
+  <p class="w3-xlarge">Learn coding for free!</p>
+  <a href="{% url 'login' %}" style="text-decoration:none">
+  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button></a>
+</header>
+  
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Learn with Un_sifar</h1>
+      <h1 class="w3-padding-32">How to start!</h1>
+
+      <h3 class="w3-text-grey">If you do not have an account on Un_sifar, then first create an account by going to sign up.
+        Then after login,go to the course section and select the course you want to learn.Enjoy and learn Programming!  
+      </h3>
+    </div>
+
+    <div class="w3-third w3-center">
+      <img src="http://nationswell.com/wp-content/uploads/2014/06/hack-edu-1024x671.jpg" alt="" height="400" width="600">
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <img src="data:image/png;base64,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" alt="">
+    </div>
+   
+    <div class="w3-twothird">
+      <h1>Practice with Un_sifar</h1>
+      <h2 class="w3-padding-32">Learn to code </h2>
+
+      <h3 class="w3-text-grey">Only going through the tutorials is not enough, so learners should also practice simultaneously with tutorials. Problems are attached with each tutorials for good learning. 
+      </h3>
+    </div>
+  </div>
+</div>
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>
+
+<!-- Footer -->
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”</h1>
+    <h2 class="w3-margin w3-xlarge">-Martin Fowler</h2>
+</div>
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+{% endblock %}

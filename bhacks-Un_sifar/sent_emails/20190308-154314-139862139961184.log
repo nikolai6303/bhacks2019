@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: noposo@yourweb.email
+Date: Fri, 08 Mar 2019 15:43:14 -0000
+Message-ID: <155205979490.5312.15583080104184210452@ringmaker-X550EA>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/just/reset/Mw/54g-150c836bfeeaf1840d41/
+
+Your username, in case you've forgotten: user1
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------

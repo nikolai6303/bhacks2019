@@ -1,0 +1,46 @@
+{% extends 'social/base.html' %}
+{% block body %}
+  <style>
+  .img-thumbnail{
+    width:100%;
+    border:2px solid grey;
+
+  }
+    .container {
+    position: relative;
+    width: 75%;
+  }
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+  img{
+    width:100%;
+  }
+  .img-fluid{
+    width:100%;
+    padding-bottom:10px;  
+    size:cover;
+  }
+</style><br><br><br>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Choose any course!</h1>
+      </div>
+
+    </div>
+    <h1>{{obj}}</h1>
+      <div class="container">
+        <div class="row">
+      {% for field in god %}
+        <div class="col-lg-4 col-xs-6 thumbnail img-fluid"><a href="{% url 'lecture' field.id %}"><img src="{{field.logo.url}}"></a><br>Rs.{{field.price}}<br>
+<br>
+        <a href=""><button type="button" class="btn btn-outline-success">Clik here to subscribe</button></a>
+        </div>
+      {% endfor %}
+    </div>
+    </div>
+  <script>
+    
+  </script>
+{% endblock %}

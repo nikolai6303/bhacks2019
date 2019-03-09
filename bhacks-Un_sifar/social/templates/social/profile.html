@@ -1,0 +1,35 @@
+{% extends 'social/base.html' %}
+{% block body %}
+ <style>
+  .img-thumbnail{
+    width:100%;
+    border:2px solid grey;
+
+  }
+    .container {
+    position: relative;
+    width: 75%;
+  }
+  .container img {
+    width: 10%;
+    height: auto;
+  }
+  img{
+    width:100%;
+  }
+  .img-fluid{
+    width:30%;
+    padding-bottom:10px;  
+    size:cover;
+  }
+</style>
+<br>
+<br>
+<br>
+{% load static %}
+<link rel="stylesheet" href="{% static 'registration/one_st.css' %}" type="text/css" >
+    <h2>Username  &nbsp{{user.username}}</h2>
+    <h2>Email: &nbsp{{user.email}}</h2>
+    {{rating}}
+    <img src="{{photo}}" class="img-thumbnail img-fluid">
+{% endblock %}
